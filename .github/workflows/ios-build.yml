@@ -38,6 +38,8 @@ jobs:
         # settings.gradle co include 'android', nen Gradle can SDK khi cau hinh.
         run: |
           set -euo pipefail
+          # Windows checkout khong giu exec bit cua gradlew -> set lai cho chac.
+          chmod +x gradlew
           SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-$HOME/Library/Android/sdk}}"
           echo "sdk.dir=$SDK" > local.properties
           ./gradlew --no-daemon --version

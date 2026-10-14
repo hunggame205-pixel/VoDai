@@ -22,11 +22,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up JDK 11
+      - name: Set up JDK 17
+        # AGP 8.13.2 bat buoc JDK 17+ (Gradle van cau hinh ca module :android).
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "11"
+          java-version: "17"
 
       - name: Select Xcode 15.4
         run: |
@@ -77,13 +78,14 @@ jobs:
           IOS_PROVISIONING_PROFILE: ${{ secrets.IOS_PROVISIONING_PROFILE }}
         run: |
           set -euo pipefail
+          # Plugin RoboVM ho tro san cac property dang -Probovm.*
           ARGS=()
           if [ "$HAS_SIGNING" = "true" ]; then
-            ARGS+=("-PiosSignIdentity=$IOS_SIGN_IDENTITY")
-            ARGS+=("-PiosProvisioningProfile=$IOS_PROVISIONING_PROFILE")
+            ARGS+=("-Probovm.iosSignIdentity=$IOS_SIGN_IDENTITY")
+            ARGS+=("-Probovm.iosProvisioningProfile=$IOS_PROVISIONING_PROFILE")
           else
             echo "::warning::Khong co secret ky. Build IPA KHONG KY - chi de kiem tra build, khong cai duoc len may that."
-            ARGS+=("-PiosSkipSigning=true")
+            ARGS+=("-Probovm.iosSkipSigning=true")
           fi
           ./gradlew --no-daemon --stacktrace ios:createIPA "${ARGS[@]}"
 

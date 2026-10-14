@@ -1,6 +1,7 @@
 # Build iOS bằng GitHub Actions
 
-Dự án: libGDX `VDTTGDX` — backend iOS dùng **RoboVM 2.3.20**, Gradle wrapper 8.13, JDK 11.
+Dự án: libGDX `VDTTGDX` — backend iOS dùng **RoboVM 2.3.20**, Gradle wrapper 8.13, JDK 17
+(bắt buộc, vì Android Gradle Plugin 8.13.2 cần JDK 17+).
 
 Vì RoboVM cần Xcode (chỉ chạy trên macOS), cách chuẩn để build iOS trên GitHub là
 dùng **GitHub-hosted macOS runner** (`macos-14`) rồi gọi task `ios:createIPA`.
@@ -99,12 +100,18 @@ cd Client
 ./gradlew ios:launchIPhoneSimulator          # chạy trên simulator iPhone
 ```
 
-Credential không nên hard-code — truyền qua `-P`:
+Credential không nên hard-code — plugin RoboVM đọc trực tiếp các property `robovm.*`:
 
 ```bash
 ./gradlew ios:createIPA \
-  -PiosSignIdentity="Apple Distribution: Cong ty ABC (TEAMID)" \
-  -PiosProvisioningProfile="VDTTGDX AppStore"
+  -Probovm.iosSignIdentity="Apple Distribution: Cong ty ABC (TEAMID)" \
+  -Probovm.iosProvisioningProfile="VDTTGDX AppStore"
+```
+
+Build nhanh không cần ký (chỉ để kiểm tra biên dịch):
+
+```bash
+./gradlew ios:createIPA -Probovm.iosSkipSigning=true
 ```
 
 ---
@@ -113,7 +120,7 @@ Credential không nên hard-code — truyền qua `-P`:
 
 | File | Thay đổi |
 | --- | --- |
-| [.github/workflows/ios-build.yml](.github/workflows/ios-build.yml) | Workflow Actions build IPA (macOS, JDK 11, Xcode 15.4) |
+| [.github/workflows/ios-build.yml](.github/workflows/ios-build.yml) | Workflow Actions build IPA (macOS, JDK 17, Xcode 15.4) |
 | [Client/ios/robovm.xml](Client/ios/robovm.xml) | Thêm cờ linker `-ld_classic` cho Xcode 15 |
-| [Client/ios/build.gradle](Client/ios/build.gradle) | Nhận `iosSignIdentity` / `iosProvisioningProfile` / `iosSkipSigning` qua `-P` |
+| — | `Client/ios/build.gradle` giữ nguyên: plugin RoboVM đã hỗ trợ sẵn cờ `-Probovm.*` |
 | [Client/.gitignore](Client/.gitignore) | Bỏ qua keystore/cert/profile |

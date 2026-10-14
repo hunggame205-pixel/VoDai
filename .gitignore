@@ -1,0 +1,43 @@
+# =========================================================
+#  Build / output — KHONG commit
+# =========================================================
+Client/build/
+Client/out/
+Client/.gradle/
+Client/.idea/
+Client/core/build/
+Client/desktop/build/
+Client/android/build/
+Client/android/.gradle/
+Client/android/gen/
+Client/android/libs/
+Client/android/prod/
+Client/android/release/
+Client/ios/build/
+Client/ios/robovm-build/
+Client/local.properties
+
+Source/out/
+Source/target/
+Source/logs/
+Source/.idea/
+
+# =========================================================
+#  IDE / OS
+# =========================================================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.DS_Store
+Thumbs.db
+hs_err_pid*.log
+
+# =========================================================
+#  Secrets & signing — KHONG BAO GIO commit
+# =========================================================
+*.jks
+*.keystore
+*.p12
+*.mobileprovision

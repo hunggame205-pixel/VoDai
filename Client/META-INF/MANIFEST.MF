@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_202-b08 (Oracle Corporation)
+Class-Path: lib/gdx.jar lib/gdx.jar
+X-COMMENT: Beatdz Dep Trai Vo Cung Tan
+Main-Class: com.beatdz.vdttplus.desktop.DesktopLauncher
+

@@ -1,0 +1,362 @@
+[
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2512,
+    "y": 397,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2456,
+    "y": 397,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2393,
+    "y": 397,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2337,
+    "y": 397,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2231,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2147,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2091,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 2049,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1979,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1930,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1874,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1825,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1755,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1699,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1643,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1587,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1538,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1461,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1398,
+    "y": 468,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1285,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1222,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1173,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1124,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1061,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 1019,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 970,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 907,
+    "y": 395,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 779,
+    "y": 469,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 709,
+    "y": 469,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 660,
+    "y": 469,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 611,
+    "y": 469,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 497,
+    "y": 540,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 399,
+    "y": 540,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 350,
+    "y": 540,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 1250000,
+    "level": 40,
+    "x": 280,
+    "y": 540,
+    "id": 301,
+    "paintMiniMap": false,
+    "levelBoss": 0,
+    "status": 0
+  },
+  {
+    "hpFull": 125000000,
+    "level": 40,
+    "x": 1796,
+    "y": 468,
+    "id": 309,
+    "paintMiniMap": false,
+    "levelBoss": 7,
+    "status": 0
+  }
+]

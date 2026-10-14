@@ -1,0 +1,31 @@
+sourceSets.main.java.srcDirs = [ "src/" ]
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+ext {
+	mainClassName = "com.mygdx.game.IOSLauncher"
+}
+
+launchIPhoneSimulator.dependsOn build
+launchIPadSimulator.dependsOn build
+launchIOSDevice.dependsOn build
+createIPA.dependsOn build
+
+robovm {
+	archs = "arm64"
+
+	// CI (GitHub Actions) truyen credential qua -P, khong luu vao repo.
+	// Vi du: ./gradlew ios:createIPA -PiosSignIdentity=... -PiosProvisioningProfile=...
+	if (project.hasProperty("iosSignIdentity")) {
+		iosSignIdentity = project.property("iosSignIdentity")
+	}
+	if (project.hasProperty("iosProvisioningProfile")) {
+		iosProvisioningProfile = project.property("iosProvisioningProfile")
+	}
+	if (project.hasProperty("iosSkipSigning")) {
+		iosSkipSigning = project.property("iosSkipSigning").toBoolean()
+	}
+}
+
+eclipse.project.name = appName + "-ios"

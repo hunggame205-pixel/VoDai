@@ -1,0 +1,182 @@
+// Module-level build.gradle for the Android app (LibGDX project)
+
+android {
+    // Namespace used by AndroidManifest and R classes
+    namespace "com.mygdx.game"
+
+    // SDK and build tools versions
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+
+    // Enable generation of BuildConfig.java so buildConfigField works
+    buildFeatures {
+        buildConfig true
+    }
+
+    // Source sets mapping to the LibGDX project structure
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            // Assets are typically shared with core module
+            assets.srcDirs = ['../assets']
+            // Native libraries (.so) are placed under libs
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    // Exclude iOS metadata from packaging to avoid conflicts
+    packagingOptions {
+        exclude 'META-INF/robovm/ios/robovm.xml'
+    }
+
+    // Default app configuration
+    defaultConfig {
+        applicationId "com.mygdx.game"
+        minSdkVersion 19
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+
+        // Optional: if you use vector drawables in support libs
+        // vectorDrawables {
+        //     useSupportLibrary true
+        // }
+    }
+
+    // Define build types: debug for local development, release for production
+    buildTypes {
+        release {
+            // Debuggable off for productions
+            debuggable false
+
+            // Enable code shrinking and resource shrinking
+            minifyEnabled true
+            shrinkResources true
+
+            // Use the optimized default proguard rules plus your custom rules
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+
+            // Build config fields used in code via BuildConfig.<NAME>
+            // SERVER_IP points to your production server (public IP or domain)
+            buildConfigField "String", "SERVER_IP", "\"180.93.42.32\""
+
+            // Optional: if your server uses non-HTTPS, ensure cleartext is allowed in manifest
+            // and network_security_config permits that IP/domain.
+        }
+
+        debug {
+            // Debuggable on for better debugging
+            debuggable true
+
+            // Keep app readable and resources intact for debugging
+            minifyEnabled false
+            shrinkResources false
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+
+            // For Android Emulator: 10.0.2.2 maps to host machine loopback
+            // If using a physical device, replace with LAN IP (e.g., 192.168.x.x)
+            buildConfigField "String", "SERVER_IP", "\"10.0.2.2\""
+        }
+    }
+
+    // Optional but recommended: product flavors for clearer environment separation
+    // This lets you build dev/staging/prod with different SERVER_IP values
+    productFlavors {
+        dev {
+            // Development flavor (emulator/local)
+            dimension "environment"
+            // Emulator host IP; change to LAN IP if using a physical device (e.g., 192.168.1.50)
+            buildConfigField "String", "SERVER_IP", "\"10.0.2.2\""
+            // Suffix to differentiate package if needed
+            // applicationIdSuffix ".dev"
+            // versionNameSuffix "-dev"
+        }
+        staging {
+            // Staging flavor for pre-production testing
+            dimension "environment"
+            // Put your staging server IP or domain here
+            buildConfigField "String", "SERVER_IP", "\"180.93.42.32\""
+            // applicationIdSuffix ".staging"
+            // versionNameSuffix "-staging"
+        }
+        prod {
+            // Production flavor (release server)
+            dimension "environment"
+            buildConfigField "String", "SERVER_IP", "\"180.93.42.32\""
+            // applicationIdSuffix ".prod"
+            // versionNameSuffix "-prod"
+        }
+    }
+
+    // If you define flavors, you must declare flavorDimensions
+    flavorDimensions "environment"
+}
+
+// -----------------------------------------------------------------------------
+// Tasks: copy native libraries out of LibGDX natives jars into libs/* ABI dirs
+// -----------------------------------------------------------------------------
+tasks.register('copyAndroidNatives') {
+    doFirst {
+        // Ensure ABI folders exist
+        file("libs/armeabi-v7a/").mkdirs()
+        file("libs/arm64-v8a/").mkdirs()
+        file("libs/x86_64/").mkdirs()
+        file("libs/x86/").mkdirs()
+
+        // Copy .so files from natives jars to appropriate ABI folders
+        configurations.natives.copy().files.each { jar ->
+            def outputDir = null
+            if (jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
+            if (jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+            if (jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
+            if (jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+            if (outputDir != null) {
+                copy {
+                    from zipTree(jar)
+                    into outputDir
+                    include "*.so"
+                }
+            }
+        }
+    }
+}
+
+// Make mergeJniLibFolders tasks depend on copying natives
+tasks.matching { it.name.contains("merge") && it.name.contains("JniLibFolders") }.configureEach { packageTask ->
+    packageTask.dependsOn 'copyAndroidNatives'
+}
+
+// -----------------------------------------------------------------------------
+// Task to start the app on a connected device/emulator via ADB
+// -----------------------------------------------------------------------------
+tasks.register('run', Exec) {
+    def path
+    def localProperties = project.file("../local.properties")
+    if (localProperties.exists()) {
+        Properties properties = new Properties()
+        localProperties.withInputStream { instr ->
+            properties.load(instr)
+        }
+        def sdkDir = properties.getProperty('sdk.dir')
+        if (sdkDir) {
+            path = sdkDir
+        } else {
+            path = "$System.env.ANDROID_HOME"
+        }
+    } else {
+        path = "$System.env.ANDROID_HOME"
+    }
+
+    def adb = path + "/platform-tools/adb"
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.mygdx.game/com.mygdx.game.AndroidLauncher'
+}
+
+// Eclipse project naming for legacy setups (LibGDX)
+eclipse.project.name = appName + "-android"

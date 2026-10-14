@@ -1,0 +1,55 @@
+Bán vật phẩm: Túi 3 ô số lượng: 9
+Bán vật phẩm: Túi 2 ô số lượng: 18
+Bán vật phẩm: Túi 1 ô số lượng: 36
+Bán vật phẩm: Thẻ phục hồi pet số lượng: 1
+Bán vật phẩm: Cải trang Poc Baby số lượng: 1
+Bán vật phẩm: Rương hoạt động số lượng: 10
+Bán vật phẩm: Viên capsule trắng số lượng: 10
+Bán vật phẩm: Viên capsule trang phục số lượng: 1
+Bán vật phẩm: Ki cân đẩu vân số lượng: 40
+Bán vật phẩm: Vé vận may số lượng: 2
+Bán vật phẩm: Thuốc tăng kháng cấp 3 số lượng: 10
+Bán vật phẩm: Thuốc tăng máu cấp 3 số lượng: 20
+Bán vật phẩm: Đá cực tốc số lượng: 1
+Bán vật phẩm: Đá cực quang xanh số lượng: 133
+Bán vật phẩm: Đá cực quang xanh số lượng: 1000
+Bán vật phẩm: Túi đỏ số lượng: 25
+Bán vật phẩm: Pha Lê Đỏ số lượng: 7
+Bán vật phẩm: Pha Lê Hồng số lượng: 8
+Bán vật phẩm: Pha Lê Cam số lượng: 9
+Bán vật phẩm: Pha Lê Trắng số lượng: 11
+Bán vật phẩm: Pha Lê Xanh Dương số lượng: 5
+Bán vật phẩm: Thỏi đồng số lượng: 44
+Bán vật phẩm: Hoa quả tươi số lượng: 78
+Bán vật phẩm: Tinh thạch lục số lượng: 21
+Bán vật phẩm: Tiến hóa đan số lượng: 1
+Bán vật phẩm: Pha Lê Tím số lượng: 3
+Bán vật phẩm: Pha Lê Xanh Lá số lượng: 6
+Bán vật phẩm: Pha Lê Vàng số lượng: 9
+Bán vật phẩm: Vé kho báu số lượng: 1
+Bán vật phẩm: Đá thời gian số lượng: 191
+Bán vật phẩm: Đá tâm trí số lượng: 189
+Bán vật phẩm: Đá sức mạnh số lượng: 264
+Bán vật phẩm: Đá không gian số lượng: 164
+Bán vật phẩm: Thuốc tăng lực cấp 3 số lượng: 20
+Bán vật phẩm: Rương thời trang đệ tử số lượng: 1
+Bán vật phẩm: Rương thời trang đệ tử số lượng: 1
+Bán vật phẩm: Viên capsule chàm số lượng: 999
+Bán vật phẩm: Viên capsule tím số lượng: 999
+Bán vật phẩm: Viên capsule lam số lượng: 999
+Bán vật phẩm: Cải trang Golden Fide số lượng: 1
+Bán vật phẩm: Cải trang Noel số lượng: 1
+Bán vật phẩm: Mũ Văn Lang số lượng: 1
+Bán vật phẩm: Cải trang Yuzun số lượng: 1
+Bán vật phẩm: Cải trang Fusion Zamasu số lượng: 1
+Bán vật phẩm: Cải trang Jiren số lượng: 1
+Bán vật phẩm: Cải trang Janemba số lượng: 1
+Bán vật phẩm: Cải trang GôHan Bư số lượng: 1
+Bán vật phẩm: Cải trang Hit số lượng: 1
+Bán vật phẩm: Cải trang Hit số lượng: 1
+Bán vật phẩm: Cân đẩu vân cấp 2 số lượng: 1
+Bán vật phẩm: Cải trang Trunks khóa số lượng: 1
+Bán vật phẩm: Cải trang Cooler số lượng: 1
+Bán vật phẩm: Cải trang Kid Buu số lượng: 1
+Bán vật phẩm: Cải trang Future Trunks số lượng: 1
+Bán vật phẩm: Cải trang Rồng 1 Sao số lượng: 1
